@@ -96,7 +96,7 @@ main {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--light-color);
+  background-color:#369C07;
   color: var(--text-color);
   line-height: 1.6;
 }
