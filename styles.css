@@ -1,85 +1,12 @@
 /* ============================================================
    SUZA Web Technologies — Practical Test
-   Student      : [WRITE YOUR FULL NAME]
-   Reg No.      : [WRITE YOUR REG NUMBER]
-   Question     : Q[XXX] — [PASTE YOUR QUESTION TITLE]
-   ============================================================ */
+   Student Name      : ABDULMAJID MOHD ALI
+   Registration No.  : BCS/18/23/004/TZ
+   Question Number   : Q118
+   Question Title    : Music Album Page
+============================================================ */
 
-/* ---------- Starter reset (you may keep or modify) ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #2d3436;
-  background: #fafafa;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: #0a3d62;
-}
-
-/* ---------- Header / Footer (do not over-edit) ---------- */
-.page-header,
-.page-footer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  background: #ffffff;
-  border-bottom: 1px solid #e2e2e2;
-}
-
-.page-header .logo {
-  flex-shrink: 0;
-}
-
-.page-header h1 {
-  margin: 0;
-  font-size: 1.4rem;
-}
-
-.page-header .subtitle {
-  margin: 0;
-  color: #636e72;
-  font-size: 0.9rem;
-}
-
-.page-footer {
-  border-top: 1px solid #e2e2e2;
-  border-bottom: none;
-  margin-top: 3rem;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 0.9rem;
-}
-
-.page-footer p {
-  margin: 0.25rem 0;
-}
-
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-/* ============================================================
-   YOUR SOLUTION CSS GOES BELOW
-   Delete the .solution placeholder rules once you start.
-   ============================================================ */
-   :root {
+:root {
   --primary-color: #111827;
   --secondary-color: #2563eb;
   --light-color: #f3f4f6;
@@ -96,12 +23,12 @@ main {
 
 body {
   font-family: Arial, sans-serif;
-  background-color:#369C07;
+  background-color: var(--light-color);
   color: var(--text-color);
   line-height: 1.6;
 }
 
-/* Header */
+
 
 .page-header {
   background-color: var(--primary-color);
@@ -137,7 +64,7 @@ body {
   color: #38bdf8;
 }
 
-/* Album Header */
+
 
 .album-header {
   display: flex;
@@ -152,26 +79,152 @@ body {
   border-radius: 10px;
 }
 
-.solution {
-  background: #fff;
-  border: 1px dashed #b2bec3;
-  padding: 2rem;
+.album-details h2 {
+  margin-bottom: 15px;
+}
+
+.album-details p {
+  margin-bottom: 10px;
+}
+
+.album-details a {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.album-details a:hover {
+  background-color: var(--hover-color);
+}
+
+
+
+.track-section {
+  padding: 40px;
+}
+
+.track-section h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white-color);
+}
+
+table th,
+table td {
+  border: 1px solid #cccccc;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+table a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+
+
+.about-section {
+  padding: 40px;
+  background-color: var(--white-color);
+}
+
+.about-section h2 {
+  margin-bottom: 20px;
+}
+
+.about-section a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.about-section a:hover {
+  text-decoration: underline;
+}
+
+
+
+.related-section {
+  padding: 40px;
+}
+
+.related-section h2 {
+  margin-bottom: 20px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.album-card {
+  background-color: var(--white-color);
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
+  transition: transform 0.3s;
 }
 
-.solution img {
-  margin: 1rem auto;
-  border-radius: 8px;
+.album-card:hover {
+  transform: translateY(-5px);
 }
 
-/* ---------- Example media query (mobile) ---------- */
-@media (max-width: 600px) {
-  .page-header {
+.album-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+.page-footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+@media (max-width: 375px) {
+
+  .album-header {
     flex-direction: column;
     text-align: center;
   }
-  main {
-    padding: 1rem;
+
+  .album-image img {
+    width: 100%;
   }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
 }
