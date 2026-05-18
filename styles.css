@@ -8,11 +8,11 @@
 
 :root {
   --primary-color: #111827;
-  --secondary-color: #2563eb;
-  --light-color: #f3f4f6;
-  --white-color: #ffffff;
-  --text-color: #333333;
-  --hover-color: #1d4ed8;
+  --secondary-color: #ebd725;
+  --light-color: #9C0731;
+  --white-color: #557005;
+  --text-color: #fff1f1;
+  --hover-color: #d8ac1d;
 }
 
 * {
